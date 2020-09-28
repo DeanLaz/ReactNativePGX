@@ -4,21 +4,27 @@ import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
 const HomeScreen = ({ navigation }) => {
   return (
     <View>
-      <Text style={styles.text}>
-        Welcome to Deans First React Native Project...
-      </Text>
+      <Text style={styles.text}>MountainReportX</Text>
       <Button
         onPress={() => navigation.navigate("Components")}
         title="View Components"
       />
       <Button title="View Lists" onPress={() => navigation.navigate("List")} />
       <Button
-        title="View Images"
+        title="Mountain Info"
         onPress={() => navigation.navigate("Image")}
       />
       <Button
-        title="View Counter"
+        title="Ski Lift Counter"
         onPress={() => navigation.navigate("Counter")}
+      />
+      <Button
+        title="Random Winter Colors"
+        onPress={() => navigation.navigate("Color")}
+      />
+      <Button
+        title="Create Winter Color"
+        onPress={() => navigation.navigate("Square")}
       />
     </View>
   );
@@ -26,7 +32,9 @@ const HomeScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 25,
+    fontSize: 22,
+    textAlign: "center",
+    padding: 10,
   },
 });
 

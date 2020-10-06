@@ -12,6 +12,7 @@ import {
   StyleSheet,
   ScrollView,
   View,
+  FlatList,
   Text,
   StatusBar,
 } from 'react-native';
@@ -23,12 +24,14 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import Header from './src/components/Header';
+import AlbumList from './src/components/AlbumList';
 
 const App = () => {
   return (
-    <>
-      <Header />
-    </>
+    <View style={{flex: 1}}>
+      <Header headerText={'AlbumX'} />
+      <AlbumList />
+    </View>
   );
 };
 
@@ -37,7 +40,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.lighter,
   },
   engine: {
-    position: 'absolute',
+    // position: 'absolute',
     right: 0,
   },
   body: {
